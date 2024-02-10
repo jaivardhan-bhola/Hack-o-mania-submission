@@ -75,7 +75,7 @@ class uploadDetailsFieldState extends State<uploadDetailsField> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("Dimensions", style: GoogleFonts.montserrat(textStyle: TextStyle(color: Color.fromARGB(255, 172, 104, 255), fontSize: 25, fontWeight: FontWeight.w600))),
+                    Text("Dimensions", style: GoogleFonts.montserrat(textStyle: const TextStyle(color: Color.fromARGB(255, 172, 104, 255), fontSize: 25, fontWeight: FontWeight.w600))),
                     const SizedBox(height: 10),
                     Image.asset("assets/Field2.png"),
                     const SizedBox(height: 20),

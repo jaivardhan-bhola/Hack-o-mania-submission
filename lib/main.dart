@@ -1,4 +1,5 @@
 import 'package:agrosnap/pages/home.dart';
+import 'package:agrosnap/pages/home_admin.dart';
 import 'package:flutter/material.dart';
 
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home:HomeAdmin(),
     );
   }
 }

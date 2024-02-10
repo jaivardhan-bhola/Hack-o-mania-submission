@@ -75,7 +75,7 @@ class uploadDetailsYieldState extends State<uploadDetailsYield> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Center(child: Text("Yield Data", style: GoogleFonts.montserrat(textStyle: TextStyle(color: Color.fromARGB(255, 172,104,255), fontSize: 25, fontWeight: FontWeight.w600)))),
+                    Center(child: Text("Yield Data", style: GoogleFonts.montserrat(textStyle: const TextStyle(color: Color.fromARGB(255, 172,104,255), fontSize: 25, fontWeight: FontWeight.w600)))),
                     const SizedBox(height: 10),
                     Text("Crops", style: GoogleFonts.montserrat(textStyle: TextStyle(color: Colors.grey[800], fontSize: 12, fontWeight: FontWeight.w400))),
                     const SizedBox(height: 10),
