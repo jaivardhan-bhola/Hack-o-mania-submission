@@ -28,7 +28,6 @@ class DashboardState extends State<Dashboard> {
           const SizedBox(height: 20),
           Center(child: Text("Welcome to AgroSnap!", style: GoogleFonts.montserrat(textStyle: const TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold)))),
           const SizedBox(height: 20),
-          // add a card showing the user's dimensions of the farm and a container showing the user's map location
           Card(
             child: SizedBox(
               height: MediaQuery.of(context).size.height * 0.7,
