@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="agrosnap"
+        android:label="Agro Snap"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/true">
         <meta-data android:name="com.google.android.geo.API_KEY"
                android:value="AIzaSyDhrVyd5SqVL8YVwGM6FgqSaKbNm16tRSA"/>
         <activity

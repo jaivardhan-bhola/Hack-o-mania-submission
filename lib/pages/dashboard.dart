@@ -33,6 +33,7 @@ class DashboardState extends State<Dashboard> {
               height: MediaQuery.of(context).size.height * 0.7,
               width: MediaQuery.of(context).size.width * 0.9,
               child: GoogleMap(
+  onMapCreated: _onMapCreated,
    initialCameraPosition: CameraPosition(
       target: _center,
       zoom: 11.0,
