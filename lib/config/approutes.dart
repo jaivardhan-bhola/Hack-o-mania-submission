@@ -1,14 +1,12 @@
-import 'package:hackathon/pages/adminaccount.dart';
-import 'package:hackathon/pages/editpreferencepage.dart';
-import 'package:hackathon/pages/loginpage.dart';
-import 'package:hackathon/pages/signup.dart';
+import 'package:agrosnap/pages/account.dart';
+import 'package:agrosnap/pages/loginpage.dart';
+import 'package:agrosnap/pages/signup.dart';
 
 class AppRoutes {
   static final pages = {
     '/': (context) => LoginPage(),
-    '/editpage': (context) => EditPreferencesForm(),
     '/signup': (context) => SignUp(),
-    '/adminaccount': (context) => adminaccount(),
+    '/adminaccount': (context) => const Account(),
     // '/loginpage':(context) =>loginpage(),
     // '/home':(context) =>homepage(),
     // '/mainpage':(context) =>mainpage(),

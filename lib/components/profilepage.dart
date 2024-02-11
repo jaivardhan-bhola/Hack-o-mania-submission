@@ -1,13 +1,15 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:hackathon/components/toolbar.dart';
-import 'package:hackathon/components/useravatar.dart';
+import 'package:agrosnap/components/toolbar.dart';
+import 'package:agrosnap/components/useravatar.dart';
 
 //jai shree ram
 enum profilemenu { edit, logout }
 
 class profilepage extends StatelessWidget {
+  const profilepage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,25 +18,22 @@ class profilepage extends StatelessWidget {
           onSelected: (value) {
             switch (value) {
               case profilemenu.edit:
-                print("edit button clicked");
                 Navigator.of(context).pushNamed('/editprofilepage');
                 break;
               case profilemenu.logout:
-                print("log out button clicked");
                 break;
               default:
-                print("baawla hogya ke");
             }
           },
           itemBuilder: (context) {
             return [
-              PopupMenuItem(child: Text("EDIT"), value: profilemenu.edit),
-              PopupMenuItem(child: Text("LOG OUT"), value: profilemenu.logout),
+              const PopupMenuItem(value: profilemenu.edit, child: Text("EDIT")),
+              const PopupMenuItem(value: profilemenu.logout, child: Text("LOG OUT")),
             ];
           },
         )
       ]),
-      body: Column(
+      body: const Column(
         children: [
           useravatar(size: 90),
           SizedBox(height: 24),

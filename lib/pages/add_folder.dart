@@ -1,8 +1,11 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:textfield_datepicker/textfield_datepicker.dart';
 import 'package:agrosnap/pages/home_admin.dart';
+
 class AddFolder extends StatefulWidget {
   const AddFolder({super.key});
 
@@ -30,7 +33,6 @@ class AddFolderState extends State<AddFolder> {
             const SizedBox(height: 20),
             Text("Add a new folder", style: GoogleFonts.montserrat(textStyle: const TextStyle(color: Color.fromARGB(255, 172, 104, 255), fontSize: 20, fontWeight: FontWeight.w600))),
             const SizedBox(height: 20),
-
             const CircleAvatar(
               backgroundColor: Color.fromARGB(255, 172, 104, 255),
               radius: 100,

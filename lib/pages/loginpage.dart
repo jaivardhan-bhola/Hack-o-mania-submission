@@ -1,10 +1,15 @@
 //jai shree ram
+// ignore_for_file: must_be_immutable
+
+import 'package:agrosnap/pages/home_admin.dart';
 import 'package:flutter/material.dart';
-import 'package:hackathon/config/appstrings.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatelessWidget {
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+
+  LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,26 +19,25 @@ class LoginPage extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           child: Column(
             children: [
-              SizedBox(height: 38),
-              Text(
-                AppStrings.helloWelcome,
-                style: TextStyle(
-                  fontSize: 25.2,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 38),
+              const SizedBox(height: 38),
+              RichText(
+          text: TextSpan(
+            text: 'Agro',
+            style: GoogleFonts.montserrat(textStyle: const TextStyle(color: Color.fromARGB(255, 172, 104, 255), fontSize: 30, fontWeight: FontWeight.bold)),
+            children:  <TextSpan>[
+              TextSpan(text: 'Snap', style: GoogleFonts.montserrat(textStyle: const TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold))),
+            ],
+          ),
+        ),
+              
+              const SizedBox(height: 30),
+              Image.asset('assets/Logo.png', width: 200, height: 200,),
               Text(
                 "Log in to continue",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Urbanist',
-                  color: Colors.orange,
-                ),
-              ),
-              SizedBox(height: 38),
+                style: GoogleFonts.montserrat(textStyle: const TextStyle(color: Color.fromARGB(255, 172, 104, 255), fontSize: 20, fontWeight: FontWeight.w600))),
+              const SizedBox(height: 38),
               Padding(
-                padding: EdgeInsets.only(left: 15, right: 15),
+                padding: const EdgeInsets.only(left: 15, right: 15),
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
@@ -41,7 +45,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   child: TextField(
                     controller: usernameController,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: "Username",
                       border: InputBorder.none,
                       contentPadding: EdgeInsets.all(16),
@@ -49,9 +53,9 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 28),
+              const SizedBox(height: 28),
               Padding(
-                padding: EdgeInsets.only(left: 15, right: 15),
+                padding: const EdgeInsets.only(left: 15, right: 15),
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
@@ -60,7 +64,7 @@ class LoginPage extends StatelessWidget {
                   child: TextField(
                     controller: passwordController,
                     obscureText: true,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: "Password",
                       border: InputBorder.none,
                       contentPadding: EdgeInsets.all(16),
@@ -72,9 +76,8 @@ class LoginPage extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: TextButton(
                   onPressed: () {
-                    print('Forgot password is Clicked');
                   },
-                  child: Text('Forgot Password?'),
+                  child: const Text('Forgot Password?'),
                 ),
               ),
               ElevatedButton(
@@ -84,13 +87,14 @@ class LoginPage extends StatelessWidget {
                   } else if (passwordController.text.isEmpty) {
                     _showErrorDialog(context, 'Password not defined');
                   } else {
-                    Navigator.of(context).pushReplacementNamed('/adminaccount');
+                    Navigator.popUntil(context, (route) => route.isFirst);
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeAdmin()));
                   }
                 },
-                child: Text("Log in"),
+                child: const Text("Log in"),
               ),
-              Text('Or sign in with'),
-              SizedBox(height: 10),
+              const Text('Or sign in with'),
+              const SizedBox(height: 10),
               Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -100,10 +104,9 @@ class LoginPage extends StatelessWidget {
                         backgroundColor: Colors.white.withOpacity(0.0),
                       ),
                       onPressed: () {
-                        print("Facebook icon is clicked");
                       },
                       child: Image.asset(
-                        'assets/images/facebook.png',
+                        'assets/Facebook.png',
                         width: 22,
                         height: 22,
                       ),
@@ -113,10 +116,9 @@ class LoginPage extends StatelessWidget {
                         backgroundColor: Colors.white.withOpacity(0.0),
                       ),
                       onPressed: () {
-                        print("Google icon is clicked");
                       },
                       child: Image.asset(
-                        'assets/images/search.png',
+                        'assets/Search.png',
                         width: 22,
                         height: 22,
                       ),
@@ -126,9 +128,8 @@ class LoginPage extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/signup');
                 },
-                child: Text(
+                child: const Text(
                   "Don't have an account? Sign up",
                   style: TextStyle(decoration: TextDecoration.underline),
                 ),
@@ -144,14 +145,14 @@ class LoginPage extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Error'),
+        title: const Text('Error'),
         content: Text(errorMessage),
         actions: [
           TextButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: Text('OK'),
+            child: const Text('OK'),
           ),
         ],
       ),
