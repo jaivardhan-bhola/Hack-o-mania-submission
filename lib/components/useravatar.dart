@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/cupertino.dart';
 
 class useravatar extends StatelessWidget {
@@ -10,7 +12,7 @@ class useravatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.elliptical(26, 36),
         ),
         child: Image.asset('assets/images/as1.png', width: size, height: size));

@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 
 class textfieldforusername extends StatelessWidget {
@@ -9,7 +11,7 @@ class textfieldforusername extends StatelessWidget {
         decoration: InputDecoration(
       hintText: hint,
       labelText: hint,
-      border: OutlineInputBorder(
+      border: const OutlineInputBorder(
         borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
     ));
