@@ -1,10 +1,8 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.hackathon">
     <application
-        android:label="agrosnap"
+        android:label="hackathon"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
-        <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyDhrVyd5SqVL8YVwGM6FgqSaKbNm16tRSA"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
