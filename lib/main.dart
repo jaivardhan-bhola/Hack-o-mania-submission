@@ -1,18 +1,21 @@
-import 'package:agrosnap/pages/home.dart';
-import 'package:agrosnap/pages/home_admin.dart';
 import 'package:flutter/material.dart';
+import 'config/approutes.dart';
 
+void main() {
+  runApp(myapp());
+}
 
-void main() => runApp(const MyApp());
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-
+class myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:HomeAdmin(),
+    // TODO: implement build
+    return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.light,
+        fontFamily: 'Urbanist',
+      ),
+      initialRoute: '/',
+      routes: AppRoutes.pages,
     );
   }
 }
